@@ -210,7 +210,7 @@ def _add_directive_lines(
         autodoc_typehints=config.autodoc_typehints,
         directive_name=(
             'py:attribute'
-            if props.obj_type in {'class', 'exception'} and props.doc_as_attr  # type: ignore[attr-defined]
+            if props.obj_type in {'class', 'exception'} and getattr(props, 'doc_as_attr', False)
             else f'py:{props.obj_type}'
         ),
         is_final=is_final,
@@ -267,7 +267,7 @@ def _document_members(
     *self.options.members*.
     """
     has_members = props.obj_type == 'module' or (
-        props.obj_type in {'class', 'exception'} and not props.doc_as_attr  # type: ignore[attr-defined]
+        props.obj_type in {'class', 'exception'} and not getattr(props, 'doc_as_attr', False)
     )
     if not has_members:
         return
