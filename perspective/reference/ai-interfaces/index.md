@@ -25,7 +25,7 @@ covers the authoring interface only.
 **Expected outputs:**
 - MyST Markdown valid for direct inclusion in the doc tree
 - `:term:` roles used for all {doc}`/glossary` terms
-- Front-matter table at the top (human_author, ai_partner, creation_mode)
+- YAML front-matter block at the top (`human_author`, `ai_partner`, `creation_mode`)
 - `{note}` block labeled **Prompt used** when the section is fully AI-generated
 
 **MCP routes (to be defined):**
