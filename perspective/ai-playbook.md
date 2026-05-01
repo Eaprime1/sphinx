@@ -12,7 +12,8 @@ transparent and the documentation is honest about how it was made.
 
 ## Front-matter on every page
 
-Every `.md` page in this doc set (except stubs and indexes) carries a front-matter block:
+Every `.md` page in this doc set carries a front-matter block, except stubs, indexes,
+glossaries, and ready-reference / quick-reference pages:
 
 ```yaml
 ---
