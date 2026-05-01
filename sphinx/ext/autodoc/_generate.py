@@ -267,7 +267,8 @@ def _document_members(
     *self.options.members*.
     """
     has_members = props.obj_type == 'module' or (
-        props.obj_type in {'class', 'exception'} and not getattr(props, 'doc_as_attr', False)
+        props.obj_type in {'class', 'exception'}
+        and not getattr(props, 'doc_as_attr', False)
     )
     if not has_members:
         return
