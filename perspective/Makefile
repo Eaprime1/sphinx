@@ -28,7 +28,7 @@ serve: html
 # Build the play/ pool as a standalone mini-site (no toctree checks)
 play-html:
 	@$(SPHINXBUILD) -M html $(SOURCEDIR) $(BUILDDIR)/play-site \
-		-D exclude_patterns="" \
+		-D exclude_patterns="_build,.DS_Store" \
 		-D master_doc=play/README \
 		$(SPHINXOPTS)
 	@echo "Play build finished: $(BUILDDIR)/play-site/html/"

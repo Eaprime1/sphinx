@@ -11,10 +11,6 @@ their relationships. For deep theory, see {doc}`/explanation/index`.
 
 ## The entities
 
-```{glossary}
-:sorted:
-```
-
 The four primary entity types are:
 
 **{term}`Gravity Well`**

@@ -70,7 +70,7 @@ GW:REF:APERTURE:v1.2
 ```markdown
 {term}`Gravity Well`          ← glossary link
 {doc}`/explanation/index`     ← page link (absolute)
-{doc}`aperture`               ← page link (relative)
+{doc}`reference/entities/aperture`   ← page link (relative)
 {ref}`section label`          ← section link
 
 :::{note}
