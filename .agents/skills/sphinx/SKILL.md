@@ -151,13 +151,14 @@ suppress_warnings = reference
 
 ## Testing Patterns
 
-- **Framework:** Not explicitly detected; test files match the pattern `*.test.*`.
-- **Location:** Tests are likely placed alongside modules or in dedicated test directories.
+- **Framework:** `pytest`
+- **Location:** Tests live in the `tests/` directory.
+- **Naming:** Test modules follow the pattern `tests/test_*.py`.
 - **Style:** Standard Python test conventions; use descriptive test function names.
 
 **Example:**
 ```python
-# test_myModule.test.py
+# tests/test_parse_config.py
 def test_parse_config_valid():
     ...
 ```
