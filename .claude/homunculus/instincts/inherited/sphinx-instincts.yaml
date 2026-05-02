@@ -1,0 +1,546 @@
+# Instincts generated from https://github.com/Eaprime1/sphinx
+# Generated: 2026-05-02T03:36:42.339Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: sphinx-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/Eaprime1/sphinx
+---
+
+# Sphinx Commit Length
+
+## Action
+
+Write moderate-length commit messages (~51 characters)
+
+## Evidence
+
+- Average commit message length: 51 chars
+- Based on 32 commits
+
+---
+id: sphinx-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Eaprime1/sphinx
+---
+
+# Sphinx Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: sphinx-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Eaprime1/sphinx
+---
+
+# Sphinx Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: sphinx-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Eaprime1/sphinx
+---
+
+# Sphinx Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: sphinx-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/Eaprime1/sphinx
+---
+
+# Sphinx Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: sphinx-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Eaprime1/sphinx
+---
+
+# Sphinx Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~14x per month
+- Files: **/*.test.*
+
+---
+id: sphinx-workflow-add-ecc-bundle
+trigger: "when doing add ecc bundle"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Eaprime1/sphinx
+---
+
+# Sphinx Workflow Add Ecc Bundle
+
+## Action
+
+Follow the add-ecc-bundle workflow:
+1. Add or update .claude/ecc-tools.json
+2. Add or update .claude/skills/<skill>/SKILL.md
+3. Add or update .agents/skills/<skill>/SKILL.md
+4. Add or update .agents/skills/<skill>/agents/openai.yaml
+5. Add or update .claude/identity.json
+6. Add or update .codex/config.toml
+7. Add or update .codex/AGENTS.md
+8. Add or update .codex/agents/*.toml
+9. Add or update .claude/homunculus/instincts/inherited/<skill>-instincts.yaml
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: .claude/ecc-tools.json, .claude/skills/*/SKILL.md, .agents/skills/*/SKILL.md
+
+---
+id: sphinx-workflow-fix-pull-request-findings
+trigger: "when doing fix pull request findings"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Eaprime1/sphinx
+---
+
+# Sphinx Workflow Fix Pull Request Findings
+
+## Action
+
+Follow the fix-pull-request-findings workflow:
+1. Identify file(s) needing fixes from PR feedback
+2. Edit the relevant file(s) to address the finding
+3. Commit with a message referencing the fix
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: .claude/homunculus/instincts/inherited/*-instincts.yaml, .codex/AGENTS.md, .claude/skills/*/SKILL.md
+
+---
+id: sphinx-workflow-merge-multi-file-documentation-changes
+trigger: "when doing merge multi file documentation changes"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Eaprime1/sphinx
+---
+
+# Sphinx Workflow Merge Multi File Documentation Changes
+
+## Action
+
+Follow the merge-multi-file-documentation-changes workflow:
+1. Update multiple documentation files (e.g., .md, .toml, .py, Makefile, requirements.txt)
+2. Merge branch into main or feature branch
+3. Resolve any merge conflicts across documentation and config files
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: perspective/Makefile, perspective/glossary.md, perspective/ready-reference.md
+
+---
+id: sphinx-workflow-autodoc-generator-fix
+trigger: "when doing autodoc generator fix"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Eaprime1/sphinx
+---
+
+# Sphinx Workflow Autodoc Generator Fix
+
+## Action
+
+Follow the autodoc-generator-fix workflow:
+1. Edit sphinx/ext/autodoc/_generate.py to fix issues or update features
+2. Commit changes, sometimes with co-authorship
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: sphinx/ext/autodoc/_generate.py
+
+---
+id: sphinx-workflow-makefile-suppress-warnings-fix
+trigger: "when doing makefile suppress warnings fix"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Eaprime1/sphinx
+---
+
+# Sphinx Workflow Makefile Suppress Warnings Fix
+
+## Action
+
+Follow the makefile-suppress-warnings-fix workflow:
+1. Edit perspective/Makefile to fix suppress_warnings syntax or Python variable duplication
+2. Commit changes with a descriptive message
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: perspective/Makefile
+
+---
+id: sphinx-instinct-file-naming-camelCase
+trigger: "When creating or renaming a file in the codebase"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Eaprime1/sphinx
+---
+
+# Sphinx Instinct File Naming CamelCase
+
+## Action
+
+Use camelCase for file names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+- Consistent with observed file naming
+
+---
+id: sphinx-instinct-function-naming-camelCase
+trigger: "When defining a new function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Eaprime1/sphinx
+---
+
+# Sphinx Instinct Function Naming CamelCase
+
+## Action
+
+Name the function using camelCase
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: sphinx-instinct-class-naming-PascalCase
+trigger: "When defining a new class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Eaprime1/sphinx
+---
+
+# Sphinx Instinct Class Naming PascalCase
+
+## Action
+
+Name the class using PascalCase
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: sphinx-instinct-constant-naming-SCREAMING_SNAKE_CASE
+trigger: "When defining a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Eaprime1/sphinx
+---
+
+# Sphinx Instinct Constant Naming SCREAMING_SNAKE_CASE
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: sphinx-instinct-relative-imports
+trigger: "When importing modules within the package"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Eaprime1/sphinx
+---
+
+# Sphinx Instinct Relative Imports
+
+## Action
+
+Use relative imports
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: sphinx-instinct-named-exports
+trigger: "When exporting functions or classes from a module"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Eaprime1/sphinx
+---
+
+# Sphinx Instinct Named Exports
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: sphinx-instinct-test-location-separate
+trigger: "When adding tests for new features"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: Eaprime1/sphinx
+---
+
+# Sphinx Instinct Test Location Separate
+
+## Action
+
+Place tests in a separate directory from the source code
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+
+---
+id: sphinx-instinct-test-file-pattern
+trigger: "When creating a test file"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: Eaprime1/sphinx
+---
+
+# Sphinx Instinct Test File Pattern
+
+## Action
+
+Name test files with the .test. pattern (e.g., *.test.py)
+
+## Evidence
+
+- Pattern in workflows.feature-development.filesInvolved
+
+---
+id: sphinx-instinct-feature-commit-prefix
+trigger: "When committing a new feature"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: Eaprime1/sphinx
+---
+
+# Sphinx Instinct Feature Commit Prefix
+
+## Action
+
+Prefix the commit message with 'feat:'
+
+## Evidence
+
+- Seen in commit 'feat: add sphinx ECC bundle (.claude/ecc-tools.json)'
+- Pattern in commits.prefixes
+
+---
+id: sphinx-instinct-commit-average-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: Eaprime1/sphinx
+---
+
+# Sphinx Instinct Commit Average Length
+
+## Action
+
+Keep commit messages concise, around 50 characters
+
+## Evidence
+
+- Pattern in commits.averageLength
+
+---
+id: sphinx-instinct-add-ecc-bundle
+trigger: "When someone wants to introduce a new skill/agent bundle to the system"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: Eaprime1/sphinx
+---
+
+# Sphinx Instinct Add Ecc Bundle
+
+## Action
+
+Add or update all ECC bundle files: .claude/ecc-tools.json, .claude/skills/<skill>/SKILL.md, .agents/skills/<skill>/SKILL.md, .agents/skills/<skill>/agents/openai.yaml, .claude/identity.json, .codex/config.toml, .codex/AGENTS.md, .codex/agents/*.toml, .claude/homunculus/instincts/inherited/<skill>-instincts.yaml
+
+## Evidence
+
+- Workflow 'add-ecc-bundle'
+- Pattern in commits and files for ECC bundle
+
+---
+id: sphinx-instinct-fix-pr-findings
+trigger: "When someone needs to address code review or automated PR feedback"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: Eaprime1/sphinx
+---
+
+# Sphinx Instinct Fix Pr Findings
+
+## Action
+
+Edit the relevant files to address the finding and commit with a message referencing the fix
+
+## Evidence
+
+- Workflow 'fix-pull-request-findings'
+- Pattern in commits referencing fixes
+
+---
+id: sphinx-instinct-merge-multi-file-docs
+trigger: "When merging a feature or documentation branch into the main branch"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: Eaprime1/sphinx
+---
+
+# Sphinx Instinct Merge Multi File Docs
+
+## Action
+
+Update multiple documentation/config files, merge the branch, and resolve any merge conflicts
+
+## Evidence
+
+- Workflow 'merge-multi-file-documentation-changes'
+- Pattern in files and commit sequences
+
+---
+id: sphinx-instinct-autodoc-generator-fix
+trigger: "When someone needs to fix bugs or update logic in the autodoc generator"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: Eaprime1/sphinx
+---
+
+# Sphinx Instinct Autodoc Generator Fix
+
+## Action
+
+Edit sphinx/ext/autodoc/_generate.py and commit changes (sometimes with co-authorship)
+
+## Evidence
+
+- Workflow 'autodoc-generator-fix'
+- Pattern in commits to sphinx/ext/autodoc/_generate.py
+
+---
+id: sphinx-instinct-makefile-suppress-warnings-fix
+trigger: "When someone needs to resolve build warnings or configuration issues in the Makefile"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: Eaprime1/sphinx
+---
+
+# Sphinx Instinct Makefile Suppress Warnings Fix
+
+## Action
+
+Edit perspective/Makefile to fix suppress_warnings syntax or Python variable duplication and commit with a descriptive message
+
+## Evidence
+
+- Workflow 'makefile-suppress-warnings-fix'
+- Pattern in commits to perspective/Makefile
+
