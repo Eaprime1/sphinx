@@ -63,26 +63,24 @@ This skill teaches the core development patterns and conventions used in the `sp
 **Trigger:** When you add or modify code and need to ensure correctness  
 **Command:** `/run-tests`
 
-1. Create a test file following the `*.test.*` naming pattern (e.g., `MyModule.test.py`).
-2. Implement your test cases.
-3. Use the project's preferred test runner (framework unknown; check project docs or use `python -m unittest discover` as a fallback).
+1. Create a test file in `tests/` following the `test_*.py` naming pattern (e.g., `tests/test_my_module.py`).
+2. Implement your test cases using `pytest`.
+3. Run the test suite with `pytest`.
 4. Run your tests and ensure they pass before committing.
 
 ## Testing Patterns
 
-- **Test files** follow the pattern: `*.test.*` (e.g., `DataProcessor.test.py`)
-- **Testing framework:** Not explicitly detected; likely uses standard Python testing tools.
-- **Test structure:** Place tests in separate files alongside or within a dedicated test directory.
+- **Test files** follow the pattern: `tests/test_*.py` (e.g., `tests/test_data_processor.py`)
+- **Testing framework:** `pytest`
+- **Test structure:** Place tests in the dedicated `tests/` directory.
 
   Example test file:
   ```python
-  import unittest
-  from .MyModule import MyClass
+  from sphinx.my_module import MyClass
 
-  class TestMyClass(unittest.TestCase):
-      def test_feature(self):
-          obj = MyClass()
-          self.assertTrue(obj.some_method())
+  def test_feature():
+      obj = MyClass()
+      assert obj.some_method()
   ```
 
 ## Commands
