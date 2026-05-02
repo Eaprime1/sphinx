@@ -1,3 +1,9 @@
+---
+human_author: Perspective Project
+ai_partner: Claude (Anthropic)
+creation_mode: generated
+---
+
 # Ready Reference
 
 Quick-card for the most common operations. Each entry links to the full reference.
@@ -70,7 +76,7 @@ GW:REF:APERTURE:v1.2
 ```markdown
 {term}`Gravity Well`          ← glossary link
 {doc}`/explanation/index`     ← page link (absolute)
-{doc}`aperture`               ← page link (relative)
+{doc}`reference/entities/aperture`   ← page link (relative)
 {ref}`section label`          ← section link
 
 :::{note}
@@ -91,3 +97,8 @@ Content
 | Conceptual / philosophical | Explanation | `explanation/` |
 | Precise field definitions | Reference | `reference/` |
 | Draft / experimental | Pool | `play/` |
+
+---
+
+♓
+
