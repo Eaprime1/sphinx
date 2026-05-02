@@ -210,7 +210,10 @@ def _add_directive_lines(
         autodoc_typehints=config.autodoc_typehints,
         directive_name=(
             'py:attribute'
-            if props.obj_type in {'class', 'exception'} and getattr(props, 'doc_as_attr', False)
+            if (
+                props.obj_type in {'class', 'exception'}
+                and getattr(props, 'doc_as_attr', False)
+            )
             else f'py:{props.obj_type}'
         ),
         is_final=is_final,
