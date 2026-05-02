@@ -37,12 +37,12 @@ source_repo: https://github.com/Eaprime1/sphinx
 
 ## Action
 
-Use camelCase naming convention
+Use snake_case naming convention for Python module filenames
 
 ## Evidence
 
 - Analyzed file naming patterns in repository
-- Dominant pattern: camelCase
+- The `sphinx/` package uses snake_case module filenames such as `application.py` and `theming.py`
 
 ---
 id: sphinx-import-relative
