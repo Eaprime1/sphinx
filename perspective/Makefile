@@ -1,7 +1,6 @@
 PYTHON      ?= python3
 SPHINXOPTS  ?=
 SPHINXBUILD ?= sphinx-build
-PYTHON      ?= python3
 SOURCEDIR   = .
 BUILDDIR    = _build
 
