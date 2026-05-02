@@ -287,6 +287,13 @@ logger-objects = [
 "doc/conf.py" = [
     "INP001",  # doc/ is not a namespace package
 ]
+"perspective/conf.py" = [
+    "INP001",  # perspective/ is not a namespace package
+]
+"perspective/*" = [
+    "ANN",   # documentation config doesn't need annotations
+    "TC001", # documentation config doesn't need type-checking blocks
+]
 "doc/development/tutorials/examples/*" = [
     "I002",  # we don't need the annotations future
     "INP001",  # examples/ is not a namespace package
