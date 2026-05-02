@@ -2,7 +2,7 @@
   "version": "1.3",
   "schemaVersion": "1.0",
   "generatedBy": "ecc-tools",
-  "generatedAt": "2026-05-01T04:59:13.263Z",
+  "generatedAt": "2026-05-02T03:36:17.479Z",
   "repo": "https://github.com/Eaprime1/sphinx",
   "profiles": {
     "requested": "research",
@@ -97,7 +97,10 @@
     ".codex/agents/explorer.toml",
     ".codex/agents/reviewer.toml",
     ".codex/agents/docs-researcher.toml",
-    ".claude/homunculus/instincts/inherited/sphinx-instincts.yaml"
+    ".claude/homunculus/instincts/inherited/sphinx-instincts.yaml",
+    ".claude/commands/feature-development.md",
+    ".claude/commands/add-ecc-bundle.md",
+    ".claude/commands/fix-pull-request-findings.md"
   ],
   "packageFiles": {
     "runtime-core": [
@@ -111,6 +114,11 @@
       ".codex/agents/reviewer.toml",
       ".codex/agents/docs-researcher.toml",
       ".claude/homunculus/instincts/inherited/sphinx-instincts.yaml"
+    ],
+    "workflow-pack": [
+      ".claude/commands/feature-development.md",
+      ".claude/commands/add-ecc-bundle.md",
+      ".claude/commands/fix-pull-request-findings.md"
     ]
   },
   "moduleFiles": {
@@ -125,6 +133,11 @@
       ".codex/agents/reviewer.toml",
       ".codex/agents/docs-researcher.toml",
       ".claude/homunculus/instincts/inherited/sphinx-instincts.yaml"
+    ],
+    "workflow-pack": [
+      ".claude/commands/feature-development.md",
+      ".claude/commands/add-ecc-bundle.md",
+      ".claude/commands/fix-pull-request-findings.md"
     ]
   },
   "files": [
@@ -180,11 +193,47 @@
     }
   ],
   "workflows": [],
+    },
+    {
+      "moduleId": "workflow-pack",
+      "path": ".claude/commands/feature-development.md",
+      "description": "Workflow command scaffold for feature-development."
+    },
+    {
+      "moduleId": "workflow-pack",
+      "path": ".claude/commands/add-ecc-bundle.md",
+      "description": "Workflow command scaffold for add-ecc-bundle."
+    },
+    {
+      "moduleId": "workflow-pack",
+      "path": ".claude/commands/fix-pull-request-findings.md",
+      "description": "Workflow command scaffold for fix-pull-request-findings."
+    }
+  ],
+  "workflows": [
+    {
+      "command": "feature-development",
+      "path": ".claude/commands/feature-development.md"
+    },
+    {
+      "command": "add-ecc-bundle",
+      "path": ".claude/commands/add-ecc-bundle.md"
+    },
+    {
+      "command": "fix-pull-request-findings",
+      "path": ".claude/commands/fix-pull-request-findings.md"
+    }
+  ],
   "adapters": {
     "claudeCode": {
       "skillPath": ".claude/skills/sphinx/SKILL.md",
       "identityPath": ".claude/identity.json",
       "commandPaths": []
+      "commandPaths": [
+        ".claude/commands/feature-development.md",
+        ".claude/commands/add-ecc-bundle.md",
+        ".claude/commands/fix-pull-request-findings.md"
+      ]
     },
     "codex": {
       "configPath": ".codex/config.toml",
