@@ -190,6 +190,9 @@
       "moduleId": "runtime-core",
       "path": ".claude/homunculus/instincts/inherited/sphinx-instincts.yaml",
       "description": "Continuous-learning instincts derived from repository patterns."
+    }
+  ],
+  "workflows": [],
     },
     {
       "moduleId": "workflow-pack",
@@ -225,6 +228,7 @@
     "claudeCode": {
       "skillPath": ".claude/skills/sphinx/SKILL.md",
       "identityPath": ".claude/identity.json",
+      "commandPaths": []
       "commandPaths": [
         ".claude/commands/feature-development.md",
         ".claude/commands/add-ecc-bundle.md",

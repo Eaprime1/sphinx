@@ -9,6 +9,7 @@ from sphinx.errors import PycodeError
 from sphinx.ext.autodoc._dynamic._loader import _load_object_by_name
 from sphinx.ext.autodoc._dynamic._member_finder import _gather_members
 from sphinx.ext.autodoc._dynamic._mock import ismock
+from sphinx.ext.autodoc._property_types import _ClassDefProperties
 from sphinx.ext.autodoc._renderer import _add_content, _directive_header_lines
 from sphinx.ext.autodoc._sentinels import ALL
 from sphinx.ext.autodoc._shared import LOGGER, _get_render_mode
@@ -206,13 +207,14 @@ def _add_directive_lines(
     source_name: str,
 ) -> None:
     # generate the directive header and options, if applicable
+    if props.obj_type in {'class', 'exception'}:
+        assert isinstance(props, _ClassDefProperties)
+        directive_name = 'py:attribute' if props.doc_as_attr else f'py:{props.obj_type}'
+    else:
+        directive_name = f'py:{props.obj_type}'
     lines = _directive_header_lines(
         autodoc_typehints=config.autodoc_typehints,
-        directive_name=(
-            'py:attribute'
-            if props.obj_type in {'class', 'exception'} and props.doc_as_attr  # type: ignore[attr-defined]
-            else f'py:{props.obj_type}'
-        ),
+        directive_name=directive_name,
         is_final=is_final,
         options=options,
         props=props,
@@ -266,9 +268,13 @@ def _document_members(
     If *all_members* is True, document all members, else those given by
     *self.options.members*.
     """
-    has_members = props.obj_type == 'module' or (
-        props.obj_type in {'class', 'exception'} and not props.doc_as_attr  # type: ignore[attr-defined]
-    )
+    if props.obj_type == 'module':
+        has_members = True
+    elif props.obj_type in {'class', 'exception'}:
+        assert isinstance(props, _ClassDefProperties)
+        has_members = not props.doc_as_attr
+    else:
+        has_members = False
     if not has_members:
         return
 
