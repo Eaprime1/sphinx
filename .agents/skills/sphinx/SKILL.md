@@ -1,4 +1,3 @@
-```markdown
 # sphinx Development Patterns
 
 > Auto-generated skill from repository analysis
