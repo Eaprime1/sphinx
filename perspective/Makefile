@@ -31,7 +31,7 @@ play-html:
 	@$(SPHINXBUILD) -M html $(SOURCEDIR) $(BUILDDIR)/play-site \
 		-D exclude_patterns="_build,.DS_Store" \
 		-D root_doc=play/README \
-		-D 'suppress_warnings=["toc.not_included"]' \
+		-D suppress_warnings=toc.not_included \
 		$(SPHINXOPTS)
 	@echo "Play build finished: $(BUILDDIR)/play-site/html/"
 
