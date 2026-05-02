@@ -22,6 +22,11 @@ It defines the conditions under which content may cross from liminal to canonica
 `id`
 : String. Unique identifier. Format: `AP-{pool_id}-{well_id}`.
 
+`ka_signature`
+: String. Runic Ka encoding for this Aperture. Encodes the source pool ID, target well ID,
+  and the creation context. Distinct from `id` — the Ka signature carries semantic meaning
+  about the relationship, not just a unique key.
+
 `source_pool`
 : Reference to the {doc}`pool` on the inbound side.
 

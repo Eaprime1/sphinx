@@ -1,6 +1,6 @@
+PYTHON      ?= python3
 SPHINXOPTS  ?=
 SPHINXBUILD ?= sphinx-build
-PYTHON      ?= python3
 SOURCEDIR   = .
 BUILDDIR    = _build
 
@@ -30,10 +30,13 @@ serve: html
 play-html:
 	@$(SPHINXBUILD) -M html $(SOURCEDIR) $(BUILDDIR)/play-site \
 		-D exclude_patterns="_build,.DS_Store" \
-		-D master_doc=play/README \
+		-D root_doc=play/README \
+		-D suppress_warnings=toc.not_included \
 		$(SPHINXOPTS)
 	@echo "Play build finished: $(BUILDDIR)/play-site/html/"
 
 clean:
 	@rm -rf $(BUILDDIR)
 	@echo "Build directory cleaned."
+
+# ♓
