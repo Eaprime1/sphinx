@@ -1,3 +1,4 @@
+PYTHON      ?= python3
 SPHINXOPTS  ?=
 SPHINXBUILD ?= sphinx-build
 SOURCEDIR   = .
@@ -23,16 +24,19 @@ latexpdf:
 # Serve the HTML build locally at http://localhost:8000
 serve: html
 	@echo "Serving at http://localhost:8000 — Ctrl+C to stop"
-	@cd $(BUILDDIR)/html && python -m http.server 8000
+	@cd $(BUILDDIR)/html && $(PYTHON) -m http.server 8000
 
 # Build the play/ pool as a standalone mini-site (no toctree checks)
 play-html:
 	@$(SPHINXBUILD) -M html $(SOURCEDIR) $(BUILDDIR)/play-site \
 		-D exclude_patterns="_build,.DS_Store" \
-		-D master_doc=play/README \
+		-D root_doc=play/README \
+		-D 'suppress_warnings=["toc.not_included"]' \
 		$(SPHINXOPTS)
 	@echo "Play build finished: $(BUILDDIR)/play-site/html/"
 
 clean:
 	@rm -rf $(BUILDDIR)
 	@echo "Build directory cleaned."
+
+# ♓

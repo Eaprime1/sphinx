@@ -1,3 +1,9 @@
+---
+human_author: Perspective Project
+ai_partner: Claude (Anthropic)
+creation_mode: generated
+---
+
 # Ready Reference
 
 Quick-card for the most common operations. Each entry links to the full reference.
@@ -91,3 +97,8 @@ Content
 | Conceptual / philosophical | Explanation | `explanation/` |
 | Precise field definitions | Reference | `reference/` |
 | Draft / experimental | Pool | `play/` |
+
+---
+
+♓
+

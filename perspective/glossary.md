@@ -1,3 +1,9 @@
+---
+human_author: Perspective Project
+ai_partner: Claude (Anthropic)
+creation_mode: generated
+---
+
 # Glossary
 
 All domain terms used in Perspective documentation. Reference any term from other pages
@@ -71,3 +77,7 @@ MyST
    Markedly Structured Text — a Markdown dialect that supports Sphinx directives and roles.
    The authoring format for this documentation set. AI-friendly and human-readable.
 ```
+
+---
+
+♓
