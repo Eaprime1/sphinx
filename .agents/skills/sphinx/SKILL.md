@@ -11,14 +11,14 @@ This skill teaches you the core development patterns, coding conventions, and co
 ## Coding Conventions
 
 **File Naming**
-- Uses camelCase for Python files and directories.
-    - Example: `autoDocGenerator.py`, `myModuleTest.py`
+- Uses snake_case for Python module filenames and package paths.
+    - Example: `sphinx/application.py`, `sphinx/ext/autodoc/_generate.py`
 
 **Import Style**
-- Relative imports are preferred within modules.
+- Absolute imports are predominantly used within modules.
     - Example:
       ```python
-      from .utils import parse_config
+      from sphinx.util import logging
       ```
 
 **Export Style**
