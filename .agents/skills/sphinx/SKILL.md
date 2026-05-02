@@ -82,7 +82,7 @@ This skill teaches you the core development patterns, coding conventions, and co
 
 ### Fix Pull Request Findings
 **Trigger:** When addressing code review or automated PR feedback  
-**Command:** `/fix-pr-finding`
+**Command:** `/fix-pull-request-findings`
 
 1. Identify files needing fixes from PR feedback.
 2. Edit the relevant files to address the comments or findings.
