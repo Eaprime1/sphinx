@@ -53,16 +53,17 @@ source: repo-analysis
 source_repo: https://github.com/Eaprime1/sphinx
 ---
 
-# Sphinx Import Relative
+# Sphinx Import Style
 
 ## Action
 
-Use relative imports for project files
+Prefer absolute imports for Sphinx project modules
 
 ## Evidence
 
-- Import analysis shows relative import pattern
-- Example: import { x } from '../lib/x'
+- Import analysis shows package-qualified Python imports
+- Example: from sphinx.application import Sphinx
+- Example: from sphinx.util import logging
 
 ---
 id: sphinx-export-style
