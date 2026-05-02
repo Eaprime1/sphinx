@@ -62,7 +62,7 @@ Use relative imports for project files
 ## Evidence
 
 - Import analysis shows relative import pattern
-- Example: import { x } from '../lib/x'
+- Repository analysis indicates project-local modules are commonly imported via relative paths
 
 ---
 id: sphinx-export-style
